@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server';
 
 // Mock products data for now (will be replaced with database later)
 const mockProducts = [
@@ -8,7 +8,7 @@ const mockProducts = [
     category: 'crystals',
     price: 299,
     description: 'Beautiful rose quartz for love and healing',
-    isActive: true
+    isActive: true,
   },
   {
     id: '2',
@@ -16,7 +16,7 @@ const mockProducts = [
     category: 'gems',
     price: 599,
     description: 'Premium amethyst for spiritual protection',
-    isActive: true
+    isActive: true,
   },
   {
     id: '3',
@@ -24,34 +24,36 @@ const mockProducts = [
     category: 'magic-oils',
     price: 500,
     description: '10ml magic oil for love attraction',
-    isActive: true
-  }
-]
+    isActive: true,
+  },
+];
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
-    const category = searchParams.get('category') || undefined
-    
-    let products = mockProducts
-    
+    const { searchParams } = new URL(request.url);
+    const category = searchParams.get('category') || undefined;
+
+    let products = mockProducts;
+
     if (category) {
-      products = mockProducts.filter(product => product.category === category)
+      products = mockProducts.filter(
+        (product) => product.category === category
+      );
     }
-    
+
     return NextResponse.json({
       success: true,
       data: products,
-      count: products.length
-    })
+      count: products.length,
+    });
   } catch (error) {
-    console.error('Error fetching products:', error)
+    console.error('Error fetching products:', error);
     return NextResponse.json(
       {
         success: false,
-        error: 'Failed to fetch products'
+        error: 'Failed to fetch products',
       },
       { status: 500 }
-    )
+    );
   }
 }

@@ -10,7 +10,8 @@ const remedies = [
     name: 'Love Attraction Oil',
     price: '₹500',
     category: 'Magic Oils',
-    description: 'Specially blessed oil for attracting love and enhancing relationships',
+    description:
+      'Specially blessed oil for attracting love and enhancing relationships',
     image: '/api/placeholder/300/300',
     properties: ['Love', 'Attraction', 'Relationships'],
     volume: '10ml',
@@ -38,7 +39,7 @@ const remedies = [
     volume: '10ml',
     isFixed: true,
   },
-  
+
   // Gems - Dynamic Pricing
   {
     id: 4,
@@ -67,7 +68,7 @@ const remedies = [
     image: '/api/placeholder/300/300',
     properties: ['Wisdom', 'Growth', 'Patience'],
   },
-  
+
   // Crystals - Dynamic Pricing
   {
     id: 7,
@@ -96,14 +97,15 @@ const remedies = [
     image: '/api/placeholder/300/300',
     properties: ['Protection', 'Grounding', 'Cleansing'],
   },
-  
+
   // Pure Rudraksha - Dynamic Pricing
   {
     id: 10,
     name: 'Pure Rudraksha Mala (108 Beads)',
     price: '₹2,999',
     category: 'Pure Rudraksha',
-    description: 'Authentic 108 beads Rudraksha mala for meditation and spiritual practice',
+    description:
+      'Authentic 108 beads Rudraksha mala for meditation and spiritual practice',
     image: '/api/placeholder/300/300',
     properties: ['Meditation', 'Spiritual Growth', 'Peace'],
   },
@@ -125,7 +127,7 @@ const remedies = [
     image: '/api/placeholder/300/300',
     properties: ['Well-being', 'Peace', 'Health'],
   },
-  
+
   // All Spiritual Items - Dynamic Pricing
   {
     id: 13,
@@ -174,16 +176,17 @@ export default function ShopPage() {
             Spiritual Remedies Store
           </h1>
           <p className="font-serif text-xl text-white/90 max-w-2xl mx-auto">
-            Discover authentic spiritual remedies, blessed items, and sacred tools for your spiritual journey
+            Discover authentic spiritual remedies, blessed items, and sacred
+            tools for your spiritual journey
           </p>
         </div>
 
         {/* Filter Section */}
         <div className="mb-8 flex flex-wrap gap-4 justify-center">
           {categories.map((category) => (
-            <Button 
+            <Button
               key={category}
-              variant={category === 'All Items' ? 'mystical' : 'outline'} 
+              variant={category === 'All Items' ? 'mystical' : 'outline'}
               size="sm"
             >
               {category}
@@ -194,7 +197,10 @@ export default function ShopPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {remedies.map((item) => (
-            <Card key={item.id} className="group hover:scale-105 transition-transform duration-300">
+            <Card
+              key={item.id}
+              className="group hover:scale-105 transition-transform duration-300"
+            >
               <CardHeader className="p-0">
                 <div className="aspect-square bg-gradient-to-br from-primary-purple/20 to-primary-deep-purple/20 rounded-t-2xl flex items-center justify-center relative overflow-hidden">
                   <img
@@ -207,10 +213,17 @@ export default function ShopPage() {
                         <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="300" height="300" fill="#4C1D95"/>
                           <text x="150" y="140" text-anchor="middle" fill="#F59E0B" font-size="40" font-family="Arial">
-                            ${item.category === 'Magic Oils' ? '🧴' : 
-                              item.category === 'Gems' ? '💎' : 
-                              item.category === 'Crystals' ? '🔮' : 
-                              item.category === 'Pure Rudraksha' ? '📿' : '✨'}
+                            ${
+                              item.category === 'Magic Oils'
+                                ? '🧴'
+                                : item.category === 'Gems'
+                                  ? '💎'
+                                  : item.category === 'Crystals'
+                                    ? '🔮'
+                                    : item.category === 'Pure Rudraksha'
+                                      ? '📿'
+                                      : '✨'
+                            }
                           </text>
                           <text x="150" y="180" text-anchor="middle" fill="#F59E0B" font-size="14" font-family="Arial">${item.name}</text>
                         </svg>
@@ -234,7 +247,7 @@ export default function ShopPage() {
                 <p className="font-serif text-white/70 text-sm mb-4">
                   {item.description}
                 </p>
-                
+
                 {/* Properties */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.properties.map((property) => (
@@ -273,12 +286,17 @@ export default function ShopPage() {
                 Spiritual Starter Kit
               </h2>
               <p className="font-serif text-white/80 mb-6 max-w-2xl mx-auto">
-                Perfect for beginners! This curated collection includes Magic Oil, Rose Quartz, 
-                Amethyst, and a comprehensive guide to spiritual practices.
+                Perfect for beginners! This curated collection includes Magic
+                Oil, Rose Quartz, Amethyst, and a comprehensive guide to
+                spiritual practices.
               </p>
               <div className="flex items-center justify-center gap-4 mb-6">
-                <span className="font-serif text-white/60 line-through text-lg">₹4,999</span>
-                <span className="font-handwritten text-3xl text-accent-gold">₹2,999</span>
+                <span className="font-serif text-white/60 line-through text-lg">
+                  ₹4,999
+                </span>
+                <span className="font-handwritten text-3xl text-accent-gold">
+                  ₹2,999
+                </span>
               </div>
               <Button size="lg">Get Starter Kit</Button>
             </CardContent>

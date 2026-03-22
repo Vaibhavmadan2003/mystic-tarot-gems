@@ -62,7 +62,8 @@ const otherServices = [
     title: 'Reiki Healing',
     price: '₹1,499',
     duration: '60 minutes',
-    description: 'Experience profound energy healing and chakra balancing for complete physical and emotional well-being. Ancient Reiki techniques channel universal life force energy to restore harmony within your body, mind, and spirit.',
+    description:
+      'Experience profound energy healing and chakra balancing for complete physical and emotional well-being. Ancient Reiki techniques channel universal life force energy to restore harmony within your body, mind, and spirit.',
     features: [
       'Chakra balancing and energy alignment',
       'Stress and anxiety relief',
@@ -78,7 +79,8 @@ const otherServices = [
     title: 'Dowsing',
     price: '₹999',
     duration: '20-30 minutes',
-    description: 'Harness the power of energy detection to receive clear yes/no answers and directional guidance. This ancient technique uses spiritual sensitivity to tap into universal wisdom for decision-making clarity.',
+    description:
+      'Harness the power of energy detection to receive clear yes/no answers and directional guidance. This ancient technique uses spiritual sensitivity to tap into universal wisdom for decision-making clarity.',
     features: [
       'Yes/No question clarity',
       'Energy-based decision guidance',
@@ -93,7 +95,8 @@ const otherServices = [
     title: 'Magic Candle Spell',
     price: '₹2,499',
     duration: '45 minutes',
-    description: 'Transform your desires into reality through sacred manifestation rituals and intention-based energy work. Each candle spell is carefully crafted to align your energy with your specific goals and dreams.',
+    description:
+      'Transform your desires into reality through sacred manifestation rituals and intention-based energy work. Each candle spell is carefully crafted to align your energy with your specific goals and dreams.',
     features: [
       'Personalized manifestation rituals',
       'Sacred intention setting ceremonies',
@@ -114,7 +117,8 @@ export default function ServicesPage() {
             Tarot Reading Services
           </h1>
           <p className="font-serif text-xl text-white/90 max-w-2xl mx-auto">
-            Connect with ancient wisdom through personalized tarot readings that illuminate your path forward
+            Connect with ancient wisdom through personalized tarot readings that
+            illuminate your path forward
           </p>
         </div>
 
@@ -123,14 +127,19 @@ export default function ServicesPage() {
           <Card className="ring-2 ring-accent-gold shadow-glow">
             <CardHeader className="text-center">
               <div className="text-6xl mb-4">🔮</div>
-              <CardTitle className="text-4xl mb-4">Tarot & Intuitive Reading</CardTitle>
+              <CardTitle className="text-4xl mb-4">
+                Tarot & Intuitive Reading
+              </CardTitle>
               <div className="flex items-center justify-center gap-4 mb-4">
-                <span className="font-handwritten text-2xl text-accent-gold">₹1,999</span>
+                <span className="font-handwritten text-2xl text-accent-gold">
+                  ₹1,999
+                </span>
                 <span className="font-serif text-white/60">30-45 minutes</span>
               </div>
               <p className="font-serif text-lg text-white/90 max-w-3xl mx-auto">
-                Accurate intuitive guidance using advanced spiritual techniques. Unlock the mysteries of your life 
-                through personalized readings that provide clarity, direction, and deep spiritual insights.
+                Accurate intuitive guidance using advanced spiritual techniques.
+                Unlock the mysteries of your life through personalized readings
+                that provide clarity, direction, and deep spiritual insights.
               </p>
             </CardHeader>
             <CardContent>
@@ -141,9 +150,14 @@ export default function ServicesPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {hrcmMethods.map((method) => (
-                    <Card key={method.id} className="group hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <Card
+                      key={method.id}
+                      className="group hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    >
                       <CardContent className="p-4 text-center">
-                        <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br ${method.color} flex items-center justify-center`}>
+                        <div
+                          className={`w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br ${method.color} flex items-center justify-center`}
+                        >
                           <span className="text-2xl">{method.icon}</span>
                         </div>
                         <h4 className="font-handwritten text-lg text-accent-gold mb-2">
@@ -165,7 +179,10 @@ export default function ServicesPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {pgtMethods.map((method) => (
-                    <Card key={method.id} className="group hover:scale-105 transition-transform duration-300">
+                    <Card
+                      key={method.id}
+                      className="group hover:scale-105 transition-transform duration-300"
+                    >
                       <CardContent className="p-6 text-center">
                         <div className="text-3xl mb-3">{method.icon}</div>
                         <h4 className="font-handwritten text-lg text-accent-gold mb-2">
@@ -199,14 +216,21 @@ export default function ServicesPage() {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {otherServices.map((service) => (
-              <Card key={service.id} className={`group hover:scale-105 transition-transform duration-300 ${service.hasGlow ? 'animate-pulse' : ''}`}>
+              <Card
+                key={service.id}
+                className={`group hover:scale-105 transition-transform duration-300 ${service.hasGlow ? 'animate-pulse' : ''}`}
+              >
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className={`text-4xl ${service.hasGlow ? 'animate-bounce' : ''}`}>
+                    <div
+                      className={`text-4xl ${service.hasGlow ? 'animate-bounce' : ''}`}
+                    >
                       {service.icon}
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-2xl">{service.title}</CardTitle>
+                      <CardTitle className="text-2xl">
+                        {service.title}
+                      </CardTitle>
                       <div className="flex items-center gap-4 mt-2">
                         <span className="font-handwritten text-xl text-accent-gold">
                           {service.price}
@@ -222,7 +246,7 @@ export default function ServicesPage() {
                   <p className="font-serif text-white/80 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="mb-6">
                     <h4 className="font-handwritten text-lg text-accent-gold mb-3">
                       What You'll Experience:
@@ -230,7 +254,9 @@ export default function ServicesPage() {
                     <ul className="space-y-2">
                       {service.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <span className="text-accent-neon-glow text-sm mt-1">✨</span>
+                          <span className="text-accent-neon-glow text-sm mt-1">
+                            ✨
+                          </span>
                           <span className="font-serif text-white/70 text-sm">
                             {feature}
                           </span>
@@ -261,7 +287,8 @@ export default function ServicesPage() {
                   1. Book Your Session
                 </h3>
                 <p className="font-serif text-white/70 text-sm">
-                  Choose your reading type and preferred time slot through our easy booking system.
+                  Choose your reading type and preferred time slot through our
+                  easy booking system.
                 </p>
               </CardContent>
             </Card>
@@ -273,7 +300,8 @@ export default function ServicesPage() {
                   2. Connect & Share
                 </h3>
                 <p className="font-serif text-white/70 text-sm">
-                  Join your private session and share your questions or areas of focus.
+                  Join your private session and share your questions or areas of
+                  focus.
                 </p>
               </CardContent>
             </Card>
@@ -285,7 +313,8 @@ export default function ServicesPage() {
                   3. Receive Guidance
                 </h3>
                 <p className="font-serif text-white/70 text-sm">
-                  Get detailed insights, practical advice, and a recording of your session.
+                  Get detailed insights, practical advice, and a recording of
+                  your session.
                 </p>
               </CardContent>
             </Card>
@@ -299,8 +328,9 @@ export default function ServicesPage() {
               Ready to Unlock Your Destiny?
             </h2>
             <p className="font-serif text-white/80 mb-6 max-w-2xl mx-auto">
-              Take the first step towards clarity and guidance. Book your personalized tarot reading today 
-              and discover what the universe has in store for you.
+              Take the first step towards clarity and guidance. Book your
+              personalized tarot reading today and discover what the universe
+              has in store for you.
             </p>
             <Link href="/booking">
               <Button size="lg">Book Your Reading Now</Button>

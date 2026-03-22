@@ -7,7 +7,10 @@ import { Modal } from '@/components/ui/Modal';
 import Link from 'next/link';
 
 export default function AboutPage() {
-  const [selectedCertificate, setSelectedCertificate] = useState<{name: string, file: string} | null>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<{
+    name: string;
+    file: string;
+  } | null>(null);
 
   const certificates = [
     { name: 'Tarot Reading Certification', file: 'IMG_20260322_200344.jpg' },
@@ -27,19 +30,22 @@ export default function AboutPage() {
                 className="h-56 w-56 object-contain"
                 style={{
                   filter: 'drop-shadow(0 0 25px rgba(139, 92, 246, 0.6))',
-                  mixBlendMode: 'screen'
+                  mixBlendMode: 'screen',
                 }}
                 onError={(e) => {
                   // Fallback to text if logo fails to load
                   e.currentTarget.style.display = 'none';
-                  const fallbackElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  const fallbackElement = e.currentTarget
+                    .nextElementSibling as HTMLElement;
                   if (fallbackElement) {
                     fallbackElement.style.display = 'flex';
                   }
                 }}
               />
               <div className="w-56 h-56 bg-gradient-to-br from-accent-gold to-accent-neon-glow rounded-full items-center justify-center hidden">
-                <span className="text-mystical-black font-bold text-4xl">MTG</span>
+                <span className="text-mystical-black font-bold text-4xl">
+                  MTG
+                </span>
               </div>
             </div>
           </div>
@@ -47,14 +53,17 @@ export default function AboutPage() {
             Mystic Tarot & Gems
           </h1>
           <p className="font-serif text-xl text-white/90 max-w-2xl mx-auto">
-            Bridging ancient wisdom with modern technology to guide souls on their spiritual journey
+            Bridging ancient wisdom with modern technology to guide souls on
+            their spiritual journey
           </p>
         </div>
 
         {/* About Us and Brand Story */}
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-3xl text-center">About Anita Madan</CardTitle>
+            <CardTitle className="text-3xl text-center">
+              About Anita Madan
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex flex-col lg:flex-row gap-8 items-center">
@@ -66,28 +75,36 @@ export default function AboutPage() {
                     alt="Anita Madan - Spiritual Guide"
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjNEMxRDk1Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRjU5RTBCIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkFuaXRhIE1hZGFuPC90ZXh0Pgo8L3N2Zz4K';
+                      e.currentTarget.src =
+                        'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjNEMxRDk1Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRjU5RTBCIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkFuaXRhIE1hZGFuPC90ZXh0Pgo8L3N2Zz4K';
                     }}
                   />
                 </div>
               </div>
-              
+
               {/* Bio Content */}
               <div className="flex-1">
                 <p className="font-serif text-white/80 text-lg leading-relaxed mb-4">
-                  Born from a deep reverence for ancient mystical traditions and powered by cutting-edge tarot techniques, 
-                  Anita Madan represents a new era in tarot reading and divination. Her journey began with a simple belief: 
-                  that everyone deserves access to profound tarot insights that can illuminate their path forward.
+                  Born from a deep reverence for ancient mystical traditions and
+                  powered by cutting-edge tarot techniques, Anita Madan
+                  represents a new era in tarot reading and divination. Her
+                  journey began with a simple belief: that everyone deserves
+                  access to profound tarot insights that can illuminate their
+                  path forward.
                 </p>
                 <p className="font-serif text-white/80 text-lg leading-relaxed mb-4">
-                  With years of experience in Tarot reading, card interpretation, and mystical counseling, Anita combines 
-                  timeless tarot wisdom with modern understanding to deliver personalized readings that resonate with your 
-                  unique energy signature and life circumstances.
+                  With years of experience in Tarot reading, card
+                  interpretation, and mystical counseling, Anita combines
+                  timeless tarot wisdom with modern understanding to deliver
+                  personalized readings that resonate with your unique energy
+                  signature and life circumstances.
                 </p>
                 <p className="font-serif text-white/80 text-lg leading-relaxed">
-                  Based in New Delhi, she draws from centuries of tarot traditions while embracing innovation 
-                  to serve seekers worldwide. Every reading, every card interpretation, every interaction is infused with 
-                  intention, authenticity, and deep respect for the sacred art of tarot divination.
+                  Based in New Delhi, she draws from centuries of tarot
+                  traditions while embracing innovation to serve seekers
+                  worldwide. Every reading, every card interpretation, every
+                  interaction is infused with intention, authenticity, and deep
+                  respect for the sacred art of tarot divination.
                 </p>
               </div>
             </div>
@@ -102,9 +119,11 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <p className="font-serif text-white/80 leading-relaxed">
-                To democratize access to tarot guidance by combining ancient card reading wisdom with modern technology, 
-                empowering individuals to make informed decisions about their life's journey while maintaining 
-                the sacred essence of tarot divination practices.
+                To democratize access to tarot guidance by combining ancient
+                card reading wisdom with modern technology, empowering
+                individuals to make informed decisions about their life's
+                journey while maintaining the sacred essence of tarot divination
+                practices.
               </p>
             </CardContent>
           </Card>
@@ -115,9 +134,10 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <p className="font-serif text-white/80 leading-relaxed">
-                To become the world's most trusted platform for tarot guidance, where technology serves 
-                divination, and where every seeker finds the clarity, insight, and empowerment they need 
-                through the ancient art of tarot reading.
+                To become the world's most trusted platform for tarot guidance,
+                where technology serves divination, and where every seeker finds
+                the clarity, insight, and empowerment they need through the
+                ancient art of tarot reading.
               </p>
             </CardContent>
           </Card>
@@ -126,7 +146,9 @@ export default function AboutPage() {
         {/* Core Values */}
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-3xl text-center">Our Core Values</CardTitle>
+            <CardTitle className="text-3xl text-center">
+              Our Core Values
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -136,18 +158,19 @@ export default function AboutPage() {
                     🔮 Authenticity
                   </h3>
                   <p className="font-serif text-white/70 text-sm">
-                    We honor the sacred traditions of tarot and crystal healing while embracing innovation 
-                    that serves the highest good.
+                    We honor the sacred traditions of tarot and crystal healing
+                    while embracing innovation that serves the highest good.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="font-handwritten text-xl text-accent-gold mb-2">
                     ✨ Empowerment
                   </h3>
                   <p className="font-serif text-white/70 text-sm">
-                    Our guidance empowers you to make your own decisions, never creating dependency but 
-                    fostering inner wisdom and self-trust.
+                    Our guidance empowers you to make your own decisions, never
+                    creating dependency but fostering inner wisdom and
+                    self-trust.
                   </p>
                 </div>
               </div>
@@ -158,18 +181,20 @@ export default function AboutPage() {
                     💎 Integrity
                   </h3>
                   <p className="font-serif text-white/70 text-sm">
-                    We provide honest, compassionate guidance with complete transparency about our methods 
-                    and the nature of spiritual insight.
+                    We provide honest, compassionate guidance with complete
+                    transparency about our methods and the nature of spiritual
+                    insight.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="font-handwritten text-xl text-accent-gold mb-2">
                     🌟 Innovation
                   </h3>
                   <p className="font-serif text-white/70 text-sm">
-                    We continuously evolve our platform to better serve our community while respecting 
-                    the timeless wisdom of mystical traditions.
+                    We continuously evolve our platform to better serve our
+                    community while respecting the timeless wisdom of mystical
+                    traditions.
                   </p>
                 </div>
               </div>
@@ -180,7 +205,9 @@ export default function AboutPage() {
         {/* What Makes Us Different */}
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-3xl text-center">What Makes Us Different</CardTitle>
+            <CardTitle className="text-3xl text-center">
+              What Makes Us Different
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
@@ -191,8 +218,9 @@ export default function AboutPage() {
                     AI-Enhanced Intuition
                   </h3>
                   <p className="font-serif text-white/70">
-                    Our proprietary AI doesn't replace human intuition—it amplifies it, analyzing patterns 
-                    and energies to provide deeper, more accurate insights.
+                    Our proprietary AI doesn't replace human intuition—it
+                    amplifies it, analyzing patterns and energies to provide
+                    deeper, more accurate insights.
                   </p>
                 </div>
               </div>
@@ -204,8 +232,9 @@ export default function AboutPage() {
                     Personalized Approach
                   </h3>
                   <p className="font-serif text-white/70">
-                    Every reading is tailored to your unique energy signature, life circumstances, 
-                    and spiritual journey—no generic interpretations.
+                    Every reading is tailored to your unique energy signature,
+                    life circumstances, and spiritual journey—no generic
+                    interpretations.
                   </p>
                 </div>
               </div>
@@ -217,8 +246,9 @@ export default function AboutPage() {
                     Global Accessibility
                   </h3>
                   <p className="font-serif text-white/70">
-                    Access profound spiritual guidance from anywhere in the world, at any time, 
-                    with the same quality and depth as in-person sessions.
+                    Access profound spiritual guidance from anywhere in the
+                    world, at any time, with the same quality and depth as
+                    in-person sessions.
                   </p>
                 </div>
               </div>
@@ -230,8 +260,9 @@ export default function AboutPage() {
                     Holistic Healing
                   </h3>
                   <p className="font-serif text-white/70">
-                    Beyond readings, we offer carefully curated healing crystals and gems to support 
-                    your ongoing spiritual practice and energy work.
+                    Beyond readings, we offer carefully curated healing crystals
+                    and gems to support your ongoing spiritual practice and
+                    energy work.
                   </p>
                 </div>
               </div>
@@ -242,19 +273,22 @@ export default function AboutPage() {
         {/* Certificates Section */}
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-3xl text-center">Certifications & Credentials</CardTitle>
+            <CardTitle className="text-3xl text-center">
+              Certifications & Credentials
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="font-serif text-white/80 text-center mb-8 max-w-2xl mx-auto">
-              Anita Madan's expertise in Tarot reading and mystical arts is backed by professional certifications 
-              and years of dedicated study in various divination and healing modalities.
+              Anita Madan's expertise in Tarot reading and mystical arts is
+              backed by professional certifications and years of dedicated study
+              in various divination and healing modalities.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Certificate images - actual certificates */}
               {certificates.map((cert, index) => (
-                <Card 
-                  key={index} 
+                <Card
+                  key={index}
                   className="group hover:scale-105 transition-transform duration-300 cursor-pointer"
                   onClick={() => setSelectedCertificate(cert)}
                 >
@@ -271,8 +305,18 @@ export default function AboutPage() {
                       {/* Click indicator */}
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -280,15 +324,18 @@ export default function AboutPage() {
                     <h3 className="font-handwritten text-lg text-accent-gold text-center">
                       {cert.name}
                     </h3>
-                    <p className="text-center text-white/60 text-sm mt-1">Click to view full size</p>
+                    <p className="text-center text-white/60 text-sm mt-1">
+                      Click to view full size
+                    </p>
                   </CardContent>
                 </Card>
               ))}
             </div>
-            
+
             <div className="text-center mt-8">
               <p className="font-serif text-white/60 text-sm">
-                All certifications are from recognized Tarot and mystical arts institutions
+                All certifications are from recognized Tarot and mystical arts
+                institutions
               </p>
             </div>
           </CardContent>
@@ -301,15 +348,17 @@ export default function AboutPage() {
               Ready to Begin Your Journey?
             </h2>
             <p className="font-serif text-white/80 mb-6 max-w-2xl mx-auto">
-              Join thousands of seekers who have found clarity, healing, and empowerment through our platform. 
-              Your spiritual journey awaits.
+              Join thousands of seekers who have found clarity, healing, and
+              empowerment through our platform. Your spiritual journey awaits.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/booking">
                 <Button size="lg">Book a Reading</Button>
               </Link>
               <Link href="/shop">
-                <Button variant="outline" size="lg">Explore Crystals</Button>
+                <Button variant="outline" size="lg">
+                  Explore Crystals
+                </Button>
               </Link>
             </div>
           </CardContent>
@@ -317,8 +366,8 @@ export default function AboutPage() {
       </div>
 
       {/* Certificate Modal */}
-      <Modal 
-        isOpen={!!selectedCertificate} 
+      <Modal
+        isOpen={!!selectedCertificate}
         onClose={() => setSelectedCertificate(null)}
       >
         {selectedCertificate && (

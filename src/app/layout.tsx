@@ -51,9 +51,7 @@ export default function RootLayout({
     <html lang="en" className="smooth-scroll">
       <body className="antialiased">
         <Navigation />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

@@ -55,19 +55,22 @@ const Navigation = () => {
                 className="h-12 w-12 object-contain"
                 style={{
                   filter: 'drop-shadow(0 0 10px rgba(139, 92, 246, 0.5))',
-                  mixBlendMode: 'screen'
+                  mixBlendMode: 'screen',
                 }}
                 onError={(e) => {
                   // Fallback to gradient circle if logo fails to load
                   e.currentTarget.style.display = 'none';
-                  const fallbackElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  const fallbackElement = e.currentTarget
+                    .nextElementSibling as HTMLElement;
                   if (fallbackElement) {
                     fallbackElement.style.display = 'flex';
                   }
                 }}
               />
               <div className="w-12 h-12 bg-gradient-to-br from-accent-gold to-accent-neon-glow rounded-full items-center justify-center hidden">
-                <span className="text-mystical-black font-bold text-sm">MTG</span>
+                <span className="text-mystical-black font-bold text-sm">
+                  MTG
+                </span>
               </div>
             </div>
             <span className="font-handwritten text-xl text-accent-gold group-hover:text-accent-neon-glow transition-colors duration-300">

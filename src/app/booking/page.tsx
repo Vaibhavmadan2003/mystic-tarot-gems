@@ -12,7 +12,8 @@ export default function BookingPage() {
             Book Your Reading
           </h1>
           <p className="font-serif text-xl text-white/90 max-w-2xl mx-auto">
-            Connect with the mystical realm and discover what the universe has in store for you
+            Connect with the mystical realm and discover what the universe has
+            in store for you
           </p>
         </div>
 
@@ -106,9 +107,12 @@ export default function BookingPage() {
               </CardHeader>
               <CardContent>
                 <p className="font-serif text-white/80 mb-4">
-                  Discover insights about your romantic life, soulmate connections, and relationship dynamics.
+                  Discover insights about your romantic life, soulmate
+                  connections, and relationship dynamics.
                 </p>
-                <p className="font-serif text-accent-gold font-semibold">₹2,999</p>
+                <p className="font-serif text-accent-gold font-semibold">
+                  ₹2,999
+                </p>
               </CardContent>
             </Card>
 
@@ -118,9 +122,12 @@ export default function BookingPage() {
               </CardHeader>
               <CardContent>
                 <p className="font-serif text-white/80 mb-4">
-                  Uncover your professional path, career opportunities, and success potential.
+                  Uncover your professional path, career opportunities, and
+                  success potential.
                 </p>
-                <p className="font-serif text-accent-gold font-semibold">₹2,999</p>
+                <p className="font-serif text-accent-gold font-semibold">
+                  ₹2,999
+                </p>
               </CardContent>
             </Card>
 
@@ -130,9 +137,12 @@ export default function BookingPage() {
               </CardHeader>
               <CardContent>
                 <p className="font-serif text-white/80 mb-4">
-                  Explore your financial future, investment opportunities, and wealth manifestation.
+                  Explore your financial future, investment opportunities, and
+                  wealth manifestation.
                 </p>
-                <p className="font-serif text-accent-gold font-semibold">₹2,999</p>
+                <p className="font-serif text-accent-gold font-semibold">
+                  ₹2,999
+                </p>
               </CardContent>
             </Card>
 
@@ -142,9 +152,12 @@ export default function BookingPage() {
               </CardHeader>
               <CardContent>
                 <p className="font-serif text-white/80 mb-4">
-                  Gain insights into your physical and spiritual well-being, healing, and vitality.
+                  Gain insights into your physical and spiritual well-being,
+                  healing, and vitality.
                 </p>
-                <p className="font-serif text-accent-gold font-semibold">₹2,999</p>
+                <p className="font-serif text-accent-gold font-semibold">
+                  ₹2,999
+                </p>
               </CardContent>
             </Card>
           </div>

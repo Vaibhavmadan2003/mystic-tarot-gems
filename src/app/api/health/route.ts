@@ -7,7 +7,7 @@ export async function GET() {
       timestamp: new Date().toISOString(),
       message: 'Mystic Tarot & Gems API is running',
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         status: 'error',

@@ -77,7 +77,10 @@ const Footer = () => {
                   onError={(e) => {
                     // Fallback to gradient circle if logo fails to load
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling.style.display = 'flex';
+                    const fallbackElement = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallbackElement) {
+                      fallbackElement.style.display = 'flex';
+                    }
                   }}
                 />
                 <div className="w-10 h-10 bg-gradient-to-br from-accent-gold to-accent-neon-glow rounded-full items-center justify-center hidden">

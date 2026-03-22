@@ -249,7 +249,7 @@ export default function ServicesPage() {
 
                   <div className="mb-6">
                     <h4 className="font-handwritten text-lg text-accent-gold mb-3">
-                      What You'll Experience:
+                      What You&apos;ll Experience:
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, index) => (

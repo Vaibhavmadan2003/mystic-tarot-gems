@@ -159,13 +159,14 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block font-serif text-white/90 text-sm font-medium mb-2">
-                      Phone Number (Optional)
+                      Phone Number *
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent-neon-glow focus:border-transparent"
                       placeholder="Enter your phone number"
                     />

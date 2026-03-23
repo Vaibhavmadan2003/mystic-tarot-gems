@@ -230,9 +230,6 @@ export default function BookingPage() {
                   Discover insights about your romantic life, soulmate
                   connections, and relationship dynamics.
                 </p>
-                <p className="font-serif text-accent-gold font-semibold">
-                  ₹2,999
-                </p>
               </CardContent>
             </Card>
 
@@ -244,9 +241,6 @@ export default function BookingPage() {
                 <p className="font-serif text-white/80 mb-4">
                   Uncover your professional path, career opportunities, and
                   success potential.
-                </p>
-                <p className="font-serif text-accent-gold font-semibold">
-                  ₹2,999
                 </p>
               </CardContent>
             </Card>
@@ -260,9 +254,6 @@ export default function BookingPage() {
                   Explore your financial future, investment opportunities, and
                   wealth manifestation.
                 </p>
-                <p className="font-serif text-accent-gold font-semibold">
-                  ₹2,999
-                </p>
               </CardContent>
             </Card>
 
@@ -274,9 +265,6 @@ export default function BookingPage() {
                 <p className="font-serif text-white/80 mb-4">
                   Gain insights into your physical and spiritual well-being,
                   healing, and vitality.
-                </p>
-                <p className="font-serif text-accent-gold font-semibold">
-                  ₹2,999
                 </p>
               </CardContent>
             </Card>

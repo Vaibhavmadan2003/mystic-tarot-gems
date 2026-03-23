@@ -60,7 +60,6 @@ const otherServices = [
   {
     id: 'reiki-healing',
     title: 'Reiki Healing',
-    price: '₹1,499',
     duration: '60 minutes',
     description:
       'Experience profound energy healing and chakra balancing for complete physical and emotional well-being. Ancient Reiki techniques channel universal life force energy to restore harmony within your body, mind, and spirit.',
@@ -77,7 +76,6 @@ const otherServices = [
   {
     id: 'dowsing',
     title: 'Dowsing',
-    price: '₹999',
     duration: '20-30 minutes',
     description:
       'Harness the power of energy detection to receive clear yes/no answers and directional guidance. This ancient technique uses spiritual sensitivity to tap into universal wisdom for decision-making clarity.',
@@ -93,7 +91,6 @@ const otherServices = [
   {
     id: 'magic-candle-spell',
     title: 'Magic Candle Spell',
-    price: '₹2,499',
     duration: '45 minutes',
     description:
       'Transform your desires into reality through sacred manifestation rituals and intention-based energy work. Each candle spell is carefully crafted to align your energy with your specific goals and dreams.',
@@ -132,7 +129,7 @@ export default function ServicesPage() {
               </CardTitle>
               <div className="flex items-center justify-center gap-4 mb-4">
                 <span className="font-handwritten text-2xl text-accent-gold">
-                  ₹1,999
+                  Contact for Pricing
                 </span>
                 <span className="font-serif text-white/60">30-45 minutes</span>
               </div>

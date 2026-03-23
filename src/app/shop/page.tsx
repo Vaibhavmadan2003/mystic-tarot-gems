@@ -192,7 +192,7 @@ export default function ShopPage() {
             <Button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              variant={selectedCategory === category ? 'default' : 'outline'}
+              variant={selectedCategory === category ? 'mystical' : 'outline'}
               className={`${
                 selectedCategory === category
                   ? 'bg-accent-neon-glow text-black'

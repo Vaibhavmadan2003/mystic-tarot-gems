@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -12,7 +12,7 @@ const serviceNames = {
   'magic-candle-spell': 'Magic Candle Spell'
 };
 
-export default function BookingPage() {
+function BookingForm() {
   const searchParams = useSearchParams();
   const serviceParam = searchParams.get('service');
   
@@ -350,5 +350,20 @@ export default function BookingPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BookingPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen mystical-gradient pt-24 pb-16 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-accent-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-white/80 font-serif">Loading booking form...</p>
+        </div>
+      </div>
+    }>
+      <BookingForm />
+    </Suspense>
   );
 }

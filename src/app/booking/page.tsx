@@ -1,10 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 
+const serviceNames = {
+  'tarot-reading': 'Tarot & Intuitive Reading',
+  'reiki-healing': 'Reiki Healing',
+  'dowsing': 'Dowsing',
+  'magic-candle-spell': 'Magic Candle Spell'
+};
+
 export default function BookingPage() {
+  const searchParams = useSearchParams();
+  const serviceParam = searchParams.get('service');
+  
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -12,10 +23,21 @@ export default function BookingPage() {
     readingType: '',
     sessionType: '',
     preferredDateTime: '',
-    message: ''
+    message: '',
+    healingService: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Set healing service based on URL parameter
+  useEffect(() => {
+    if (serviceParam && serviceNames[serviceParam as keyof typeof serviceNames]) {
+      setFormData(prev => ({
+        ...prev,
+        healingService: serviceNames[serviceParam as keyof typeof serviceNames]
+      }));
+    }
+  }, [serviceParam]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -40,6 +62,7 @@ export default function BookingPage() {
         session_type: formData.sessionType,
         preferred_datetime: formData.preferredDateTime,
         message: formData.message,
+        healing_service: formData.healingService,
         subject: 'New Booking Request - Mystic Tarot & Gems'
       };
 
@@ -61,7 +84,8 @@ export default function BookingPage() {
           readingType: '',
           sessionType: '',
           preferredDateTime: '',
-          message: ''
+          message: '',
+          healingService: serviceParam && serviceNames[serviceParam as keyof typeof serviceNames] ? serviceNames[serviceParam as keyof typeof serviceNames] : ''
         });
       } else {
         throw new Error('Failed to send email');
@@ -191,6 +215,26 @@ export default function BookingPage() {
                       <option value="health" style={{ backgroundColor: '#1a1a2e', color: '#ffffff' }}>Health & Wellness</option>
                     </select>
                   </div>
+
+                  {/* Healing Service Field - Auto-filled if coming from service page */}
+                  {formData.healingService && (
+                    <div>
+                      <label className="block font-serif text-white/90 text-sm font-medium mb-2">
+                        Selected Healing Service
+                      </label>
+                      <input
+                        type="text"
+                        name="healingService"
+                        value={formData.healingService}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-accent-gold/20 border border-accent-gold/40 rounded-lg text-accent-gold font-semibold focus:outline-none focus:ring-2 focus:ring-accent-neon-glow focus:border-transparent"
+                        readOnly
+                      />
+                      <p className="text-white/60 text-xs mt-1">
+                        This service was automatically selected based on your choice. You can modify it if needed.
+                      </p>
+                    </div>
+                  )}
 
                   <div>
                     <label className="block font-serif text-white/90 text-sm font-medium mb-2">

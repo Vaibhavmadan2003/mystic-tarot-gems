@@ -262,7 +262,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
 
-                  <Link href="/booking" className="block">
+                  <Link href={`/booking?service=${service.id}`} className="block">
                     <Button className="w-full">Book This Service</Button>
                   </Link>
                 </CardContent>

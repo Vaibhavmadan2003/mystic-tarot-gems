@@ -15,7 +15,8 @@ export async function POST(request: NextRequest) {
       reading_type,
       session_type, 
       preferred_datetime, 
-      message 
+      message,
+      healing_service
     } = body;
 
     console.log('Environment variables check:', {
@@ -42,6 +43,7 @@ export async function POST(request: NextRequest) {
         reading_type: body.reading_type || 'N/A',
         session_type: body.session_type || 'N/A',
         preferred_datetime: body.preferred_datetime || 'N/A',
+        healing_service: body.healing_service || 'N/A',
         subject: body.subject || 'N/A',
         form_type: body.form_type || 'Booking Form',
         message,

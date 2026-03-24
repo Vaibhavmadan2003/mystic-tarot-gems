@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Mystic Tarot & Gems' }],
   creator: 'Mystic Tarot & Gems',
   publisher: 'Mystic Tarot & Gems',
+  icons: {
+    icon: '/images/profile/ChatGPT Image Mar 22, 2026, 08_09_21 PM.png',
+    shortcut: '/images/profile/ChatGPT Image Mar 22, 2026, 08_09_21 PM.png',
+    apple: '/images/profile/ChatGPT Image Mar 22, 2026, 08_09_21 PM.png',
+  },
   openGraph: {
     title: 'Mystic Tarot & Gems - Unlock Your Destiny',
     description:

@@ -94,7 +94,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="font-serif text-white/70 text-sm mb-4">
-              Premium AI-powered spiritual services platform combining tarot
+              Premium spiritual services platform combining tarot
               reading services with healing crystal products.
             </p>
             <div className="flex space-x-4">

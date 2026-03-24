@@ -1,6 +1,6 @@
 # Mystic Tarot & Gems Website
 
-A premium AI-powered spiritual services platform that combines tarot reading services with an e-commerce gem shop. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A premium spiritual services platform that combines tarot reading services with an e-commerce gem shop. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Features
 

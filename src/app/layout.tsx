@@ -7,7 +7,7 @@ import WhatsAppFloat from '@/components/WhatsAppFloat';
 export const metadata: Metadata = {
   title: 'Mystic Tarot & Gems - Unlock Your Destiny',
   description:
-    'Premium AI-powered spiritual services platform combining tarot reading services with an e-commerce gem shop. Discover your destiny through mystical guidance and healing crystals.',
+    'Premium spiritual services platform combining tarot reading services with an e-commerce gem shop. Discover your destiny through mystical guidance and healing crystals.',
   keywords:
     'tarot reading, healing crystals, spiritual guidance, mystical services, gems, astrology, spiritual wellness',
   authors: [{ name: 'Mystic Tarot & Gems' }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mystic Tarot & Gems - Unlock Your Destiny',
     description:
-      'Premium AI-powered spiritual services platform combining tarot reading services with an e-commerce gem shop.',
+      'Premium spiritual services platform combining tarot reading services with an e-commerce gem shop.',
     type: 'website',
     locale: 'en_IN',
     siteName: 'Mystic Tarot & Gems',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mystic Tarot & Gems - Unlock Your Destiny',
     description:
-      'Premium AI-powered spiritual services platform combining tarot reading services with an e-commerce gem shop.',
+      'Premium spiritual services platform combining tarot reading services with an e-commerce gem shop.',
   },
   robots: {
     index: true,

@@ -24,7 +24,7 @@ export default function Home() {
 
       <div className="mt-16 text-center">
         <p className="text-white/60 font-sans">
-          Premium AI-powered spiritual services platform
+          Premium spiritual services platform
         </p>
       </div>
     </div>

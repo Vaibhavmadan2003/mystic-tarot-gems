@@ -3,21 +3,46 @@
 import { useState } from 'react';
 
 const WhatsAppFloat = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isWhatsAppHovered, setIsWhatsAppHovered] = useState(false);
+  const [isCallHovered, setIsCallHovered] = useState(false);
 
   const whatsappMessage = encodeURIComponent(
     "Hi! I'm interested in booking a tarot reading session. Please let me know your availability."
   );
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+      {/* Call Icon */}
+      <a
+        href="tel:+919217673528"
+        className="flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        onMouseEnter={() => setIsCallHovered(true)}
+        onMouseLeave={() => setIsCallHovered(false)}
+        aria-label="Call us"
+      >
+        <svg
+          className="w-8 h-8 text-white"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </a>
+
+      {isCallHovered && (
+        <div className="absolute bottom-16 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap">
+          Call us: +91-9217673528
+        </div>
+      )}
+
+      {/* WhatsApp Icon */}
       <a
         href={`https://wa.me/919217673528?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => setIsWhatsAppHovered(true)}
+        onMouseLeave={() => setIsWhatsAppHovered(false)}
         aria-label="Chat on WhatsApp"
       >
         <svg
@@ -29,7 +54,7 @@ const WhatsAppFloat = () => {
         </svg>
       </a>
       
-      {isHovered && (
+      {isWhatsAppHovered && (
         <div className="absolute bottom-16 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap">
           Chat with us on WhatsApp
         </div>
